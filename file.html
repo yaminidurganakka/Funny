@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My WhatsApp Status</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #status-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="status-container">
+        <h1>My WhatsApp Status</h1>
+        <p>Valentines everyday:</p>
+        <p id="status-text"></p>
+        <button onclick="generateStatus()">Generate Status</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const statusOptions = [
+        
+            "It is impossible to meet you, but our mental connection is strong😄",
+            "Physical distance doesn't diminish our emotional bond🥹",
+            "Silence between us speaks volumes🙃",
+            "Messages unspoken but feelings understood🫠",
+            "Amazing in every way, .....A.... connection that brightens my day🔥",
+         "In the dictionary of love, distance is just a word🤫",
+            "i dont know about you but your voice is so delicious😅",
+            "I did not hold your hand till now, because love is not just holding hands🤓understanding minds🤨",
+            "Valentine's day is a daily celebration with you in my thoughts🥰",
+            "🎉🎊🎈Celebrating the beauty of our unique connection🎉🎊🎈",
+            "I love you...Do you love me🤔 Always, you're my ❤⏳....A.....",
+        ];
+
+        let currentIndex = 0;
+
+        function generateStatus() {
+            const statusText = document.getElementById('status-text');
+            statusText.textContent = `"${statusOptions[currentIndex]}"`;
+            currentIndex = (currentIndex + 1) % statusOptions.length;
+        }
+    </script>
+</body>
+</html>
